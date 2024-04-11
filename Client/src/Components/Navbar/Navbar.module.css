@@ -1,0 +1,174 @@
+
+nav {
+    padding-top: 10px;
+    display: flex;
+    gap: 200px;
+    /* justify-content: space-between; */
+    justify-content: center;
+    /* align-items: center; */
+    align-items: baseline;
+    /* background color hai ye */
+    color: rgb(255, 255, 255);
+}
+
+nav .title {
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+   list-style: none; 
+}
+
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 0.5rem;
+    margin: 0 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 16px;
+}
+
+
+
+
+/* for hovering the link animation effect */
+nav ul li a{
+    color: #ffffff;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+  cursor: pointer;
+  position: relative;
+  border: none;
+}
+
+nav ul li a:focus,
+nav ul li a:hover {
+  color: #ffffff;
+}
+
+nav ul li a:focus:after,
+nav ul li a:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+nav ul li a:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #3d94cf;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+/* -------------------------------------------------------------------- */
+
+
+
+nav .menu {
+    display: none;
+    position: absolute;
+    top: 0.75rem;
+    right: 0.5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2.25rem;
+    height: 2rem;
+}
+
+nav .menu span {
+    height: 0.4rem;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 0.2rem;
+}
+
+/* for button */
+.btn {
+    border-radius:10px;
+    display: inline-block;
+    padding: 0.9rem 1.8rem;
+    font-size: 12px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    background-color: #ff4820;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    font-family: inherit;
+   }
+   
+   .btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #207dff;
+    transform: translateX(-100%);
+    transition: all .3s;
+    z-index: -1;
+   }
+   
+   .btn:hover::before {
+    transform: translateX(0);
+   }
+@media (max-width: 1045px) {
+    nav .menu {
+        display: flex;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 0px;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 0.25rem;
+    }
+
+    nav ul.open {
+        display: flex;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        margin: 0.2rem 0.5rem;
+        color: white;
+    }
+    /* nav ul li a {
+        display: block;
+        text-decoration: none;
+        color: black;
+        padding: 0.5rem;
+        margin: 0 0.5rem;
+        border-radius: 0.5rem;
+    } */
+}
