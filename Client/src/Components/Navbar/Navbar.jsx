@@ -28,9 +28,9 @@ const Navbar=()=>{
         <li>
         <Link to="/services">Services</Link>
       </li> 
-      <li>
+      {/* <li>
         <a to="/contact">Contact</a>
-      </li>
+      </li> */}
       <li>
    
       <Link to="/login" className={styles.btn} >Login</Link>
