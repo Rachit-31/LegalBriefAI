@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
-    "start:backend": "npm start --prefix Server", 
-    "start:frontend": "npm run dev --prefix Client" 
+    "start:backend": "npm start --prefix Server",
+    "start:frontend": "npm run dev --prefix Client"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.2",
+    "node-fetch": "^3.3.2"
   }
 }
