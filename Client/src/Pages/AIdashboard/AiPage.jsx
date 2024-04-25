@@ -19,47 +19,48 @@ const AiPage=()=>{
   const preExistingPrompt = 'Generate a summary in 4 lines';
 
     const {user}=useContext(UserContext);
-
     return(
-        <section>
-        <div>
-            <h1>Dashboard</h1>
-            {!!user && (<h2>Hi {user.name}!</h2>)}
+        <section className={styles.aipage}>
+        <div className={styles.greeting}>
+            {/* <h1>Dashboard</h1> */}
+            {!!user && (<h2 className={styles.username}>Hi {user.name}!</h2>)}
         </div>
 
-        <div className="result">
-						<div className="result-title">
-							
+        <div className={styles.result}>
+						{/* <div className={styles.resulttitle}>
 							<p>{recentPrompt}</p>
-						</div>
-						<div className="result-data">
-						
-            <p dangerouslySetInnerHTML={{ __html: resultData }}></p>
+						</div> */}
 
+						<div className={styles.resultdata}>
+            <p dangerouslySetInnerHTML={{ __html: resultData }}></p>
 						</div>
-					</div>
+
+				</div>
 
           
-        <div className="main-bottom">
-					<div className="search-box">
+					<div className={styles.searchbox}>
 						<input
 							onChange={(e) => {
-								setInput(`${e.target.value} ${preExistingPrompt}`);
+								setInput(`${e.target.value}`);
 							}}
 							value={input}
 							type="text"
-							placeholder="Enter the Prompt Here"
-						/>
+							placeholder="Enter the Text you want to summarize"
+						  className={styles.inputarea} />
+
 						<div>
 							<button
-
 								onClick={() => {
-									onSent();
-								}}
-							>Submit</button>
+									onSent(input+preExistingPrompt);
+								}}  className={styles.pushable} >
+                        <span class={styles.shadow}></span>
+                  <span class={styles.edge}></span>
+                  <span class={styles.front}>
+                  Submit
+                  </span></button>
 						</div>
 					</div>
-				</div>
+	
 
         </section>
     )
