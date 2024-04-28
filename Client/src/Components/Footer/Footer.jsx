@@ -7,7 +7,7 @@ const Footer=()=>{
             </div>
             <div className={styles.footerlink}>
                 <div className={styles.logo}>
-                    <h2>GPT-3</h2>
+                    <h2>LegalAI</h2>
                     <p>All Rights Reserved</p>
                 </div>
                 <div className={styles.link}>

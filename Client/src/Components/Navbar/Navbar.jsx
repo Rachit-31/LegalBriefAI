@@ -9,7 +9,7 @@ const Navbar=()=>{
     
     <div to="/" className={styles.title}>
       {/* Website */}
-      <h2>GPT-3</h2>
+      <h2>LegalAI</h2>
     </div>
     
     <div className={`${styles.menu}`} onClick={() => setMenuOpen(!menuOpen)}>
@@ -25,9 +25,9 @@ const Navbar=()=>{
       <li>
           <ScrollLink to="about" spy={true} smooth={true} offset={-100} duration={500}>What is LegalBriefAI?</ScrollLink>
       </li>
-        <li>
+        {/* <li>
         <Link to="/services">Services</Link>
-      </li> 
+      </li>  */}
       {/* <li>
         <a to="/contact">Contact</a>
       </li> */}
